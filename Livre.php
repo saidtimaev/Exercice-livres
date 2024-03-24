@@ -16,6 +16,7 @@ class Livre
         $this->_nbPages = $nbPages;
         $this->_prix = $prix;
         $this->_auteur = $auteur;
+        // A l'instanciation de l'objet livre on l'ajoute au tableau livres[] de la classe Auteur
         $this->_auteur->addLivre($this);
     }
 

@@ -55,6 +55,7 @@ Class Auteur{
         return $this;
     }
 
+    // Fonction qui va permet d'ajouter un objet livre à la propriété tableau livres[] de la classe auteur
     public function addLivre(Livre $livre)
     {
         $this->_livres[] = $livre;
@@ -63,6 +64,7 @@ Class Auteur{
     public function afficherBibliographie() 
     {
         $result = "<h1>Livres de $this </h1><br><ul>";
+        // Pour chaque objet livre du tableau livres
         foreach ($this->_livres as $livre) {
             $result .= $livre->getTitre()." (". $livre->getAnneePublication()->format('Y'). ") : ".$livre->getNbPages()." pages / " . $livre->getPrix()."€ <br>";
         }
